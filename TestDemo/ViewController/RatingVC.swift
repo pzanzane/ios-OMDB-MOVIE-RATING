@@ -8,6 +8,7 @@
 
 import UIKit
 import Cosmos
+import Firebase
 
 class RatingVC: UIViewController {
     @IBOutlet weak var containerView: UIView!
@@ -15,9 +16,12 @@ class RatingVC: UIViewController {
     @IBOutlet weak var btnSubmit: UIButton!
     @IBOutlet weak var ratingView: CosmosView!
     @IBOutlet weak var lblRatingInfo: UILabel!
+    @IBOutlet weak var txtFeedback: UITextField!
     
     //Objects
     var moviewObj : ResponseMoviewDetails?
+    var ref : DatabaseReference!
+    var userRating : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +30,11 @@ class RatingVC: UIViewController {
         
         self.ratingView.didFinishTouchingCosmos = { rating in
             print(rating)
+            self.userRating = String(rating)
         }
         // Do any additional setup after loading the view.
+        //firebase object
+        ref = Database.database().reference()
     }
     
     //MARK: - Helper
@@ -53,10 +60,16 @@ class RatingVC: UIViewController {
     
     //MARK: - ButtonAction
     @IBAction func btnSubmitTapped(_ sender: Any) {
-        if txtUserName.text?.count == 0{
-         self.showAlert(title: "", message: "Name is mandetory", closure:{})
+        if txtUserName.text?.count == 0 || txtFeedback.text?.count == 0{
+            self.showAlert(title: "", message: "Name is mandetory", closure:{})
         }else{
-             self.dismiss(animated: true, completion: nil)
+            
+            ref.child("RatingInfo").child("UserName").setValue(txtUserName.text)
+            ref.child("RatingInfo").child("Feedback").setValue(txtFeedback.text)
+            ref.child("RatingInfo").child("Rating").setValue(self.userRating ?? "0")
+            
+            self.showAlert(title: "", message: "Submitted successfuly", closure:{})
+            self.dismiss(animated: true, completion: nil)
         }
     }
     @IBAction func btnCloseTapped(_ sender: Any) {

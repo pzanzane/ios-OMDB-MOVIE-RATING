@@ -9,7 +9,9 @@ target 'TestDemo' do
    pod 'Alamofire'
    pod 'Cosmos'
    pod 'ReachabilitySwift'
-
+   pod 'Firebase/Core'
+   pod 'Firebase/Database'
+   
   target 'TestDemoTests' do
     inherit! :search_paths
     # Pods for testing

@@ -89,6 +89,7 @@ class MoviewDetailsVC: UIViewController,UIPopoverPresentationControllerDelegate 
                 self.activityIndicator.stopAnimating()
                 self.showAlert(title: "Error", message: error?.message ?? "Error", closure:{})
             }
+            self.activityIndicator.stopAnimating()
             if let response = result{
                 self.moviewDetails = response
                 self.setUpValue()
@@ -100,8 +101,8 @@ class MoviewDetailsVC: UIViewController,UIPopoverPresentationControllerDelegate 
     //MARK: - btnAction
     @IBAction func btnRateTapped(_ sender: Any) {
         let popOverControllerVC = self.storyboard?.instantiateViewController(withIdentifier: "RatingVC") as! RatingVC
-        popOverControllerVC.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         popOverControllerVC.moviewObj = self.moviewDetails
+        popOverControllerVC.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         popOverControllerVC.modalPresentationStyle = .overCurrentContext
         popOverControllerVC.modalTransitionStyle = .coverVertical
         self.present(popOverControllerVC, animated: true, completion: nil)

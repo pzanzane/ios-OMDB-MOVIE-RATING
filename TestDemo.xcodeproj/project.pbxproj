@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1811724D218B969A00864877 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1811724C218B969A00864877 /* GoogleService-Info.plist */; };
 		183D3224218B44CB000FB75D /* RatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D3223218B44CB000FB75D /* RatingVC.swift */; };
 		18535900218AB47C00A9D598 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185358FF218AB47C00A9D598 /* AppDelegate.swift */; };
 		18535905218AB47C00A9D598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18535903218AB47C00A9D598 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1811724C218B969A00864877 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		183D3223218B44CB000FB75D /* RatingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingVC.swift; sourceTree = "<group>"; };
 		185358FC218AB47C00A9D598 /* TestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185358FF218AB47C00A9D598 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				186F3B90218B021D0061D592 /* Extensions */,
-				186F3B8F218AFD060061D592 /* Utility */,
 				186F3B8C218ADC590061D592 /* CustomView */,
 				186F3B8B218ACE9A0061D592 /* ViewController */,
 				18535933218AB73700A9D598 /* ResponseModel */,
@@ -155,6 +156,7 @@
 				18535906218AB48D00A9D598 /* Assets.xcassets */,
 				18535908218AB48D00A9D598 /* LaunchScreen.storyboard */,
 				1853590B218AB48D00A9D598 /* Info.plist */,
+				1811724C218B969A00864877 /* GoogleService-Info.plist */,
 			);
 			path = TestDemo;
 			sourceTree = "<group>";
@@ -218,13 +220,6 @@
 				186F3B8D218ADC870061D592 /* moviewCell.swift */,
 			);
 			path = CustomView;
-			sourceTree = "<group>";
-		};
-		186F3B8F218AFD060061D592 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utility;
 			sourceTree = "<group>";
 		};
 		186F3B90218B021D0061D592 /* Extensions */ = {
@@ -354,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1853590A218AB48D00A9D598 /* LaunchScreen.storyboard in Resources */,
+				1811724D218B969A00864877 /* GoogleService-Info.plist in Resources */,
 				18535907218AB48D00A9D598 /* Assets.xcassets in Resources */,
 				18535905218AB47C00A9D598 /* Main.storyboard in Resources */,
 			);
@@ -421,13 +417,19 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

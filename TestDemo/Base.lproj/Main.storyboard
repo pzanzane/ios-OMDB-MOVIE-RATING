@@ -537,7 +537,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your name (Mandetory)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bcv-Fa-Lng">
-                                        <rect key="frame" x="20" y="90" width="260" height="45"/>
+                                        <rect key="frame" x="20" y="70" width="260" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="tHT-uB-HNQ"/>
                                         </constraints>
@@ -546,7 +546,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How would you rate godfather?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mg0-5T-tWz">
-                                        <rect key="frame" x="10" y="145" width="280" height="35"/>
+                                        <rect key="frame" x="10" y="215" width="280" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="zVD-6f-lhg"/>
                                         </constraints>
@@ -555,7 +555,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0M-qk-tPN" customClass="CosmosView" customModule="Cosmos">
-                                        <rect key="frame" x="10" y="230" width="290" height="50"/>
+                                        <rect key="frame" x="10" y="270" width="290" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="73f-iT-GnD"/>
@@ -578,23 +578,38 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="feedback (Mandetory)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KAZ-0U-6vj">
+                                        <rect key="frame" x="20" y="130" width="260" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="qif-RI-VKc"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Rex-OJ-nYN" id="bum-4e-PGS"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Mg0-5T-tWz" firstAttribute="leading" secondItem="Zfr-t2-K5S" secondAttribute="leading" constant="10" id="006-Br-GEw"/>
                                     <constraint firstAttribute="trailing" secondItem="Mg0-5T-tWz" secondAttribute="trailing" constant="10" id="2e2-h3-SF2"/>
+                                    <constraint firstItem="KAZ-0U-6vj" firstAttribute="leading" secondItem="Zfr-t2-K5S" secondAttribute="leading" constant="20" id="334-nq-GAc"/>
                                     <constraint firstItem="o0M-qk-tPN" firstAttribute="leading" secondItem="Zfr-t2-K5S" secondAttribute="leading" constant="10" id="4n5-RN-DJw"/>
+                                    <constraint firstItem="KAZ-0U-6vj" firstAttribute="top" secondItem="Bcv-Fa-Lng" secondAttribute="bottom" constant="15" id="77B-HS-ndl"/>
                                     <constraint firstAttribute="bottom" secondItem="9y6-u4-qI3" secondAttribute="bottom" constant="10" id="C3e-TH-0Bi"/>
                                     <constraint firstAttribute="trailing" secondItem="o0M-qk-tPN" secondAttribute="trailing" id="EgZ-q9-82G"/>
                                     <constraint firstItem="Bcv-Fa-Lng" firstAttribute="leading" secondItem="Zfr-t2-K5S" secondAttribute="leading" constant="20" id="HeH-8d-AWg"/>
                                     <constraint firstItem="nmK-ai-95K" firstAttribute="top" secondItem="Zfr-t2-K5S" secondAttribute="top" constant="10" id="I8m-of-Baa"/>
+                                    <constraint firstAttribute="trailing" secondItem="KAZ-0U-6vj" secondAttribute="trailing" constant="20" id="Ja7-ub-16i"/>
                                     <constraint firstAttribute="trailing" secondItem="Bcv-Fa-Lng" secondAttribute="trailing" constant="20" id="LhS-Jj-JLM"/>
-                                    <constraint firstItem="Bcv-Fa-Lng" firstAttribute="top" secondItem="nmK-ai-95K" secondAttribute="bottom" constant="40" id="U5Q-tj-6rk"/>
+                                    <constraint firstItem="Bcv-Fa-Lng" firstAttribute="top" secondItem="nmK-ai-95K" secondAttribute="bottom" constant="20" id="U5Q-tj-6rk"/>
+                                    <constraint firstItem="Mg0-5T-tWz" firstAttribute="top" secondItem="KAZ-0U-6vj" secondAttribute="bottom" constant="40" id="V3J-Nl-mcC"/>
                                     <constraint firstAttribute="trailing" secondItem="nmK-ai-95K" secondAttribute="trailing" constant="10" id="cUM-Nz-3Uq"/>
                                     <constraint firstAttribute="trailing" secondItem="9y6-u4-qI3" secondAttribute="trailing" constant="20" id="hrc-d3-0rr"/>
-                                    <constraint firstItem="o0M-qk-tPN" firstAttribute="top" secondItem="Mg0-5T-tWz" secondAttribute="bottom" constant="50" id="olF-dz-rcT"/>
+                                    <constraint firstItem="o0M-qk-tPN" firstAttribute="top" secondItem="Mg0-5T-tWz" secondAttribute="bottom" constant="20" id="olF-dz-rcT"/>
                                     <constraint firstItem="9y6-u4-qI3" firstAttribute="leading" secondItem="Zfr-t2-K5S" secondAttribute="leading" constant="20" id="vy3-Mi-ly6"/>
-                                    <constraint firstItem="Mg0-5T-tWz" firstAttribute="top" secondItem="Bcv-Fa-Lng" secondAttribute="bottom" constant="10" id="yt9-15-RRb"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -612,6 +627,7 @@
                         <outlet property="containerView" destination="Zfr-t2-K5S" id="z0J-6M-cR7"/>
                         <outlet property="lblRatingInfo" destination="Mg0-5T-tWz" id="dU9-3f-KRz"/>
                         <outlet property="ratingView" destination="o0M-qk-tPN" id="BOE-YT-y0D"/>
+                        <outlet property="txtFeedback" destination="KAZ-0U-6vj" id="Ses-YE-4cI"/>
                         <outlet property="txtUserName" destination="Bcv-Fa-Lng" id="52D-PX-QVv"/>
                     </connections>
                 </viewController>
