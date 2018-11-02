@@ -16,11 +16,6 @@ class moviewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        containerView.layer.cornerRadius = 7.0
-        containerView.layer.shadowOffset = CGSize(width:0, height:8)
-        containerView.layer.shadowOpacity = 0.8
-        containerView.layer.shadowColor = UIColor.lightGray.cgColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

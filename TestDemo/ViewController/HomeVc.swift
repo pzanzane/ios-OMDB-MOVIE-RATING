@@ -39,6 +39,8 @@ class HomeVc: UIViewController,UITableViewDelegate,UITableViewDataSource {
         self.segmentInitialValue()
         self.setUpActivityIndicator()
         self.moviewTable.keyboardDismissMode = UIScrollViewKeyboardDismissMode.onDrag
+        
+        self.moviewTable.estimatedRowHeight = 132.0
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -109,8 +111,8 @@ class HomeVc: UIViewController,UITableViewDelegate,UITableViewDataSource {
         searchBar = UISearchBar.init(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 38, height: 40))
         searchBar.delegate = self
         searchBar.placeholder = "Search here"
-        searchBar.tintColor = UIColor.white
-
+        //searchBar.showsCancelButton = true
+        searchBar.tintColor = UIColor.black
         let leftNavBarButton = UIBarButtonItem(customView:searchBar)
         self.navigationItem.leftBarButtonItem = leftNavBarButton
     }
@@ -172,18 +174,21 @@ extension HomeVc{
         moviewCell.lblMoviewYear.text = self.moviewArray[indexPath.row].Year ?? ""
         print(self.moviewArray[indexPath.row].Type ?? "No type")
         
-        //Assine image
+       //Assine image
         let url = URL(string: self.moviewArray[indexPath.row].Poster ?? "")
-        let data = try? Data(contentsOf: url!)
-        if let imagedata = data{
-            moviewCell.imgMoviePoster.image = UIImage(data: imagedata)
+        moviewCell.imgMoviePoster.image = UIImage(named: "default.png")
+        DispatchQueue.global().async {
+            let data = try? Data(contentsOf: url!)
+            DispatchQueue.main.async {
+                moviewCell.imgMoviePoster.image = data != nil ? UIImage(data: data!) : UIImage(named: "default.png")
+            }
         }
-    
+        
         return moviewCell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
-        return 120
+        return UITableViewAutomaticDimension
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -198,14 +203,15 @@ extension HomeVc: UISearchBarDelegate
 {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
     {
-        searchBar.endEditing(true)
+        self.searchBar.endEditing(true)
         self.makeAPICall(serchType: "s", searchText: searchBar.text ?? "")
        
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
     {
-        searchBar.endEditing(true)
+        self.searchBar.endEditing(true)
+        self.searchBar.text = ""
         self.makeAPICall(serchType: "s", searchText: "2017")
     }
 }

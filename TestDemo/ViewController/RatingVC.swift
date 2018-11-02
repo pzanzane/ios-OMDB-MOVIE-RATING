@@ -48,6 +48,9 @@ class RatingVC: UIViewController,UIPopoverPresentationControllerDelegate {
         if let objMoview = moviewObj{
             self.lblRatingInfo.text = "How would you rate \(objMoview.Title ?? "")"
         }
+        if let email = UserDefaults.standard.value(forKey: "UserEmail"){
+            self.txtUserName.text = email as? String
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

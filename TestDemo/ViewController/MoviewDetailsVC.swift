@@ -24,7 +24,10 @@ class MoviewDetailsVC: UIViewController,UIPopoverPresentationControllerDelegate 
     @IBOutlet weak var lblMetaScore: UILabel!
     @IBOutlet weak var lblMetacoreReview: UILabel!
     
-//Objects
+    @IBOutlet weak var lblPlotterInfo: UILabel!
+    @IBOutlet weak var lblWriterInfo: UILabel!
+    @IBOutlet weak var lblDirectorInfo: UILabel!
+    //Objects
     var imdbID : String!
     var moviewDetails : ResponseMoviewDetails?
     var activityIndicator = UIActivityIndicatorView()
@@ -45,17 +48,9 @@ class MoviewDetailsVC: UIViewController,UIPopoverPresentationControllerDelegate 
         self.view.addSubview(self.activityIndicator)
     }
     func setUpUI(){
-        self.navigationController?.title = "Details Info"
-        ratingContainer.layer.cornerRadius = 7.0
-        ratingContainer.layer.shadowOffset = CGSize(width:0, height:8)
-        ratingContainer.layer.shadowOpacity = 0.8
-        ratingContainer.layer.shadowColor = UIColor.lightGray.cgColor
-        
-        moviewDetailsContainer.layer.cornerRadius = 7.0
-        moviewDetailsContainer.layer.shadowOffset = CGSize(width:0, height:8)
-        moviewDetailsContainer.layer.shadowOpacity = 0.8
-        moviewDetailsContainer.layer.shadowColor = UIColor.lightGray.cgColor
-    }
+        self.navigationItem.title = "Omdb Moview Rating"
+        }
+    
     func setUpValue(){
         if let moviewInfo = self.moviewDetails{
             //Assine image
@@ -75,6 +70,10 @@ class MoviewDetailsVC: UIViewController,UIPopoverPresentationControllerDelegate 
             self.lblVotes.text = moviewInfo.imdbVotes ?? ""
             self.lblMetaScore.text = moviewInfo.Metascore ?? ""
             self.lblMetacoreReview.text = moviewInfo.totalSeasons ?? ""
+            
+            self.lblDirectorInfo.text = moviewInfo.Director ?? ""
+            self.lblWriterInfo.text = moviewInfo.Writer ?? ""
+            self.lblPlotterInfo.text = moviewInfo.Plot ?? ""
     
         }
     }
