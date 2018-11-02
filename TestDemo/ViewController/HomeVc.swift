@@ -26,6 +26,8 @@ class HomeVc: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var searchBar:UISearchBar!
     var selectedMoviewType : String!
     var activityIndicator = UIActivityIndicatorView()
+    let imageCache = NSCache<AnyObject, AnyObject>()
+    
     
     public enum MoviewType : String{
         case MOVIEW = "movie"
@@ -176,14 +178,19 @@ extension HomeVc{
         
        //Assine image
         let url = URL(string: self.moviewArray[indexPath.row].Poster ?? "")
-        moviewCell.imgMoviePoster.image = UIImage(named: "default.png")
+        if let imageFromCache = imageCache.object(forKey: url as AnyObject) as? UIImage {
+            moviewCell.imgMoviePoster.image = imageFromCache
+            return moviewCell
+        }
+        
         DispatchQueue.global().async {
             let data = try? Data(contentsOf: url!)
             DispatchQueue.main.async {
-                moviewCell.imgMoviePoster.image = data != nil ? UIImage(data: data!) : UIImage(named: "default.png")
+                let image = data != nil ? UIImage(data: data!) : UIImage(named: "default.png")
+                self.imageCache.setObject(image!, forKey: url as AnyObject)
+                moviewCell.imgMoviePoster.image = image
             }
         }
-        
         return moviewCell
     }
     

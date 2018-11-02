@@ -162,12 +162,13 @@
                                                             <rect key="frame" x="265" y="0.0" width="100" height="122"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="100" id="4tl-Or-lKo"/>
+                                                                <constraint firstAttribute="height" constant="122" id="efl-3f-KqB"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raja hidustani" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ja8-BV-QU3">
                                                             <rect key="frame" x="10" y="15" width="245" height="67"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="H7M-Tr-pxe"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="67" id="H7M-Tr-pxe"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -191,9 +192,8 @@
                                                         <constraint firstItem="XJV-KV-ihz" firstAttribute="leading" secondItem="Ja8-BV-QU3" secondAttribute="trailing" constant="10" id="Owj-Lk-200"/>
                                                         <constraint firstAttribute="trailing" secondItem="XJV-KV-ihz" secondAttribute="trailing" constant="10" id="RXk-Lj-ePE"/>
                                                         <constraint firstItem="evD-0w-SiQ" firstAttribute="top" secondItem="Ja8-BV-QU3" secondAttribute="bottom" id="aed-Nj-Z8W"/>
-                                                        <constraint firstAttribute="bottom" secondItem="XJV-KV-ihz" secondAttribute="bottom" id="bUe-UT-itu"/>
-                                                        <constraint firstItem="XJV-KV-ihz" firstAttribute="top" secondItem="HxX-ih-lKK" secondAttribute="top" id="gJL-8e-5CY"/>
                                                         <constraint firstItem="Ja8-BV-QU3" firstAttribute="top" secondItem="HxX-ih-lKK" secondAttribute="top" constant="15" id="rTS-sW-bpo"/>
+                                                        <constraint firstItem="XJV-KV-ihz" firstAttribute="centerY" secondItem="HxX-ih-lKK" secondAttribute="centerY" id="v4e-FU-o2y"/>
                                                         <constraint firstItem="XJV-KV-ihz" firstAttribute="leading" secondItem="evD-0w-SiQ" secondAttribute="trailing" constant="10" id="yTK-7o-GY6"/>
                                                     </constraints>
                                                 </view>
