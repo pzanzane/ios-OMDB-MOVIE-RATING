@@ -48,7 +48,7 @@ class MoviewDetailsVC: UIViewController,UIPopoverPresentationControllerDelegate 
         self.view.addSubview(self.activityIndicator)
     }
     func setUpUI(){
-        self.navigationItem.title = "Omdb Moview Rating"
+        self.navigationItem.title = "Omdb Movie Rating"
         }
     
     func setUpValue(){
