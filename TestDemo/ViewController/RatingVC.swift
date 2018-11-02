@@ -10,7 +10,7 @@ import UIKit
 import Cosmos
 import Firebase
 
-class RatingVC: UIViewController {
+class RatingVC: UIViewController,UIPopoverPresentationControllerDelegate {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var txtUserName: UITextField!
     @IBOutlet weak var btnSubmit: UIButton!
@@ -60,14 +60,15 @@ class RatingVC: UIViewController {
     
     //MARK: - ButtonAction
     @IBAction func btnSubmitTapped(_ sender: Any) {
+    
         if txtUserName.text?.count == 0 || txtFeedback.text?.count == 0{
             self.showAlert(title: "", message: "Name is mandetory", closure:{})
         }else{
-            
+
             ref.child("RatingInfo").child("UserName").setValue(txtUserName.text)
             ref.child("RatingInfo").child("Feedback").setValue(txtFeedback.text)
             ref.child("RatingInfo").child("Rating").setValue(self.userRating ?? "0")
-            
+
             self.showAlert(title: "", message: "Submitted successfuly", closure:{})
             self.dismiss(animated: true, completion: nil)
         }

@@ -100,13 +100,27 @@ class MoviewDetailsVC: UIViewController,UIPopoverPresentationControllerDelegate 
 
     //MARK: - btnAction
     @IBAction func btnRateTapped(_ sender: Any) {
-        let popOverControllerVC = self.storyboard?.instantiateViewController(withIdentifier: "RatingVC") as! RatingVC
-        popOverControllerVC.moviewObj = self.moviewDetails
-        popOverControllerVC.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        popOverControllerVC.modalPresentationStyle = .overCurrentContext
-        popOverControllerVC.modalTransitionStyle = .coverVertical
-        self.present(popOverControllerVC, animated: true, completion: nil)
+        //chek user is signed in or not
+        if (UserDefaults.standard.value(forKey: "UserEmail") != nil){
+                    let popOverControllerVC = self.storyboard?.instantiateViewController(withIdentifier: "RatingVC") as! RatingVC
+                    popOverControllerVC.moviewObj = self.moviewDetails
+            
+                    popOverControllerVC.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+                    popOverControllerVC.modalPresentationStyle = .overCurrentContext
+                    popOverControllerVC.modalTransitionStyle = .coverVertical
+                    self.present(popOverControllerVC, animated: true, completion: nil)
+        }else{
+            
+            let popOverControllerVC = self.storyboard?.instantiateViewController(withIdentifier: "SocialMediaSignInVC") as! SocialMediaSignInVC
+            popOverControllerVC.signInDelegate = self
+            popOverControllerVC.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+            popOverControllerVC.modalPresentationStyle = .overCurrentContext
+            popOverControllerVC.modalTransitionStyle = .coverVertical
+            self.present(popOverControllerVC, animated: true, completion: nil)
+        }
+
     }
+    
     /*
     // MARK: - Navigation
 
@@ -117,4 +131,17 @@ class MoviewDetailsVC: UIViewController,UIPopoverPresentationControllerDelegate 
     }
     */
 
+}
+
+extension MoviewDetailsVC : googleSignInProtocol{
+    func signIncomplete(userEmail: String) {
+        let popOverControllerVC = self.storyboard?.instantiateViewController(withIdentifier: "RatingVC") as! RatingVC
+        popOverControllerVC.moviewObj = self.moviewDetails
+        popOverControllerVC.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        popOverControllerVC.modalPresentationStyle = .overCurrentContext
+        popOverControllerVC.modalTransitionStyle = .coverVertical
+        self.present(popOverControllerVC, animated: true, completion: nil)
+    }
+    
+    
 }

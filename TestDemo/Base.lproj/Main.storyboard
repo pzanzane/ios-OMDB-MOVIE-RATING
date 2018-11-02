@@ -635,6 +635,66 @@
             </objects>
             <point key="canvasLocation" x="2301.5999999999999" y="78.710644677661179"/>
         </scene>
+        <!--Social Media Sign InVC-->
+        <scene sceneID="Lrv-xv-08f">
+            <objects>
+                <viewController storyboardIdentifier="SocialMediaSignInVC" id="kMG-P1-Fis" customClass="SocialMediaSignInVC" customModule="TestDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="upv-1U-RTc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1r-NU-x6n">
+                                <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NJG-HO-76a" customClass="GIDSignInButton">
+                                        <rect key="frame" x="38" y="125" width="240" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="JbW-7c-1v9"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioz-1q-5Vz">
+                                        <rect key="frame" x="250" y="10" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Oc8-E1-Qef"/>
+                                            <constraint firstAttribute="width" constant="40" id="UYZ-Y4-MsY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <state key="normal" title="Close">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeTapped:" destination="kMG-P1-Fis" eventType="touchUpInside" id="ahk-Rg-WCW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.48370082489999999" green="0.48370082489999999" blue="0.48370082489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="DKa-Ut-0NR"/>
+                                    <constraint firstItem="ioz-1q-5Vz" firstAttribute="top" secondItem="W1r-NU-x6n" secondAttribute="top" constant="10" id="Ek1-IP-HzV"/>
+                                    <constraint firstItem="NJG-HO-76a" firstAttribute="centerY" secondItem="W1r-NU-x6n" secondAttribute="centerY" id="Ekb-F8-yn9"/>
+                                    <constraint firstAttribute="trailing" secondItem="ioz-1q-5Vz" secondAttribute="trailing" constant="10" id="H6s-Ic-1Z2"/>
+                                    <constraint firstAttribute="height" constant="300" id="abF-vf-FgI"/>
+                                    <constraint firstItem="NJG-HO-76a" firstAttribute="leading" secondItem="W1r-NU-x6n" secondAttribute="leading" constant="38" id="jj9-pn-4b3"/>
+                                    <constraint firstAttribute="trailing" secondItem="NJG-HO-76a" secondAttribute="trailing" constant="22" id="kM1-6i-IOV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="W1r-NU-x6n" firstAttribute="centerY" secondItem="upv-1U-RTc" secondAttribute="centerY" id="VhS-QM-aOZ"/>
+                            <constraint firstItem="W1r-NU-x6n" firstAttribute="centerX" secondItem="upv-1U-RTc" secondAttribute="centerX" id="uar-UH-SGj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rhm-Ff-F6e"/>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="W1r-NU-x6n" id="Abn-0b-0Md"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kkS-AA-g2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3044" y="66"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="T5N-MO-Vtb">
             <objects>

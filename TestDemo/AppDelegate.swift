@@ -8,15 +8,18 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate{
+   
     var window: UIWindow?
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        //Google signin
+        GIDSignIn.sharedInstance().clientID = "959026544239-9ic85c09c008a3llt0sg72t4j4q1upbg.apps.googleusercontent.com"
         return true
     }
 
@@ -42,6 +45,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url as URL?,
+                                                 sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+                                                 annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+    }
 
 }
 

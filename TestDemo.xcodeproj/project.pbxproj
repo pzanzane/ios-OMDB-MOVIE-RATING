@@ -23,6 +23,7 @@
 		186F3B8E218ADC870061D592 /* moviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F3B8D218ADC870061D592 /* moviewCell.swift */; };
 		186F3B92218B02400061D592 /* SwiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F3B91218B02400061D592 /* SwiftExtension.swift */; };
 		186F3B94218B28EF0061D592 /* MoviewDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186F3B93218B28EF0061D592 /* MoviewDetailsVC.swift */; };
+		18D8245D218C156000E16BB3 /* SocialMediaSignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D8245C218C156000E16BB3 /* SocialMediaSignInVC.swift */; };
 		8C10D46C62C4CCB3E674809B /* Pods_TestDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66BC68442617807A46611555 /* Pods_TestDemoUITests.framework */; };
 		D736FFEC5927C54480925A2A /* Pods_TestDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CCEEC18A0423174631AD440 /* Pods_TestDemoTests.framework */; };
 		F1C1AAAF90706660785261B1 /* Pods_TestDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99EF4BEFCC970CEF757F7B42 /* Pods_TestDemo.framework */; };
@@ -68,6 +69,7 @@
 		186F3B8D218ADC870061D592 /* moviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moviewCell.swift; sourceTree = "<group>"; };
 		186F3B91218B02400061D592 /* SwiftExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftExtension.swift; sourceTree = "<group>"; };
 		186F3B93218B28EF0061D592 /* MoviewDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviewDetailsVC.swift; sourceTree = "<group>"; };
+		18D8245C218C156000E16BB3 /* SocialMediaSignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaSignInVC.swift; sourceTree = "<group>"; };
 		1CCEEC18A0423174631AD440 /* Pods_TestDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FF45414B1B590160107E072 /* Pods-TestDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestDemoTests/Pods-TestDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3D03D54C9C9E3AD6F1ED42AB /* Pods-TestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				186F3B89218ACE8B0061D592 /* HomeVc.swift */,
 				186F3B93218B28EF0061D592 /* MoviewDetailsVC.swift */,
 				183D3223218B44CB000FB75D /* RatingVC.swift */,
+				18D8245C218C156000E16BB3 /* SocialMediaSignInVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				185358F9218AB47C00A9D598 /* Frameworks */,
 				185358FA218AB47C00A9D598 /* Resources */,
 				62752318887A3EFB02EE1B36 /* [CP] Embed Pods Frameworks */,
+				F0A4CBCDECD8777259801DA0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -417,6 +421,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -426,6 +432,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -454,6 +462,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F0A4CBCDECD8777259801DA0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -464,6 +490,7 @@
 				186F3B8A218ACE8B0061D592 /* HomeVc.swift in Sources */,
 				18535931218AB63600A9D598 /* Router.swift in Sources */,
 				186F3B8E218ADC870061D592 /* moviewCell.swift in Sources */,
+				18D8245D218C156000E16BB3 /* SocialMediaSignInVC.swift in Sources */,
 				1853592F218AB61D00A9D598 /* WebServicesAPI.swift in Sources */,
 				186F3B94218B28EF0061D592 /* MoviewDetailsVC.swift in Sources */,
 				186F3B92218B02400061D592 /* SwiftExtension.swift in Sources */,

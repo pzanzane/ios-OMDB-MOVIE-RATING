@@ -11,6 +11,7 @@ target 'TestDemo' do
    pod 'ReachabilitySwift'
    pod 'Firebase/Core'
    pod 'Firebase/Database'
+   pod 'GoogleSignIn'
    
   target 'TestDemoTests' do
     inherit! :search_paths

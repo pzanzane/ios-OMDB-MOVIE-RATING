@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestDemo/ViewController/HomeVc.swift"
-            timestampString = "562781659.009503"
+            timestampString = "562837123.252057"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "132"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestDemo/ViewController/HomeVc.swift"
-            timestampString = "562781659.010088"
+            timestampString = "562837123.252134"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "136"
@@ -38,11 +38,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestDemo/ViewController/MoviewDetailsVC.swift"
-            timestampString = "562796709.218076"
+            timestampString = "562837123.252197"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestDemo/ViewController/MoviewDetailsVC.swift"
-            timestampString = "562796709.218156"
+            timestampString = "562837123.252697"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestDemo/ViewController/HomeVc.swift"
-            timestampString = "562781659.0106519"
+            timestampString = "562837123.253036"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "searchBarCancelButtonClicked(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestDemo/APIManager/WebServicesAPI.swift"
-            timestampString = "562781659.01103"
+            timestampString = "562835152.230999"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestDemo/APIManager/WebServicesAPI.swift"
-            timestampString = "562796754.287714"
+            timestampString = "562835152.231064"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
@@ -122,13 +122,77 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestDemo/APIManager/WebServicesAPI.swift"
-            timestampString = "562796755.019825"
+            timestampString = "562835152.231119"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
             endingLineNumber = "38"
             landmarkName = "makeRequest(_:callback:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestDemo/ViewController/MoviewDetailsVC.swift"
+            timestampString = "562837123.253185"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "MoviewDetailsVC"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestDemo/ViewController/MoviewDetailsVC.swift"
+            timestampString = "562837123.253527"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
+            landmarkName = "signIncomplete(userEmail:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestDemo.MoviewDetailsVC.signIncomplete(userEmail: Swift.String) -&gt; ()"
+                  moduleName = "TestDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///projects/ios-OMDB-MOVIE-RATING/TestDemo/ViewController/MoviewDetailsVC.swift"
+                  timestampString = "562837065.110785"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestDemo.MoviewDetailsVC.signIncomplete(userEmail: Swift.String) -&gt; ()"
+                  moduleName = "TestDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///projects/ios-OMDB-MOVIE-RATING/TestDemo/ViewController/MoviewDetailsVC.swift"
+                  timestampString = "562837065.114604"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "964">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -178,8 +178,7 @@ extension HomeVc{
         if let imagedata = data{
             moviewCell.imgMoviePoster.image = UIImage(data: imagedata)
         }
-       
-        
+    
         return moviewCell
     }
     
